@@ -1,0 +1,125 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #e0f7fa;
+  color: #333;
+  transition: background-color 0.3s, color 0.3s;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Dark Mode */
+body.dark {
+  background-color: #121212;
+  color: #eee;
+}
+
+.container {
+  width: 90%;
+  max-width: 500px;
+  padding: 20px;
+  border-radius: 20px;
+  background: #fff;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  transition: background 0.3s;
+}
+
+body.dark .container {
+  background: #1e1e1e;
+}
+
+/* Top Bar */
+.top-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.title {
+  font-size: 1.8rem;
+  font-weight: 600;
+}
+
+#themeToggle {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: inherit;
+}
+
+/* Search Box */
+.search-box {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+#cityInput {
+  flex: 1;
+  padding: 10px 15px;
+  font-size: 1rem;
+  border: 2px solid #ccc;
+  border-radius: 10px;
+  outline: none;
+}
+
+#searchBtn {
+  background-color: #0077ff;
+  border: none;
+  border-radius: 10px;
+  padding: 10px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+#searchBtn:hover {
+  background-color: #005fd6;
+}
+
+#searchBtn img {
+  width: 20px;
+  height: 20px;
+}
+
+/* Weather Card */
+.weather-card {
+  text-align: center;
+  padding: 20px;
+  border-radius: 20px;
+  background-color: #f1f1f1;
+  transition: opacity 0.5s ease;
+}
+
+body.dark .weather-card {
+  background-color: #2c2c2c;
+}
+
+.weather-icon {
+  width: 100px;
+  height: 100px;
+  margin-bottom: 15px;
+}
+
+.weather-card p {
+  font-size: 1.1rem;
+  margin: 5px 0;
+}
+
+.hidden {
+  display: none;
+}
+
+.show {
+  display: block;
+}
